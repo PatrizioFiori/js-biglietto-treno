@@ -7,3 +7,25 @@
 */
 
 
+let kmPercorsi = parseInt(prompt("Quanti km devi percorrere ?"))
+let eta = parseInt(prompt("Quanti anni hai ?")) 
+
+let costoBiglietto = kmPercorsi * 0.21
+let prezzoScontato;
+
+if (eta < 18 ){
+    let discount = 20;
+    prezzoScontato = costoBiglietto * (1- discount/100)
+
+} else if (eta >= 65) {
+    let discount = 40;
+    prezzoScontato = costoBiglietto * (1- discount/100)
+}
+else{
+    prezzoScontato = costoBiglietto
+}
+
+console.log(`Il costo totale è di ${prezzoScontato.toFixed(2)} €`);
+
+
+
